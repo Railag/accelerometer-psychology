@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Psychology</string>
+
+    <!-- Strings related to login -->
+
+    <string name="login">Вход</string>
+    <string name="password">Пароль</string>
+    <string name="login_email">Email</string>
+    <string name="create_account">Регистрация</string>
+    <string name="ageTitle">Возраст</string>
+    <string name="registerTitle">Регистрация</string>
+    <string name="nameHint">Введите имя</string>
+    <string name="passwordHint">Введите пароль</string>
+    <string name="next">Далее</string>
+    <string name="ageHint">Введите возраст</string>
+    <string name="landingTitle">Тесты</string>
+    <string name="timeTitle">Время</string>
+    <string name="timeHint">Введите время</string>
+
+    <string name="attentionStabilityTitle">Устойчивость внимания</string>
+    <string name="focusingTestTitle">Концентрация внимания</string>
+    <string name="stressResistanceTestTitle">Стрессоустойчивость</string>
+    <string name="englishTestTitle">Английские слова</string>
+    <string name="accelerometerTestTitle">Акселерометр</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+    <string name="resultsTitle">Результаты</string>
+    <string name="linesCount">Всего строк:</string>
+    <string name="errorsCount">Количество ошибок:</string>
+    <string name="missesCount">Количество пропущенных:</string>
+    <string name="save">Сохранить</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="AvgReactTime">Среднее время реакции:</string>
+    <string name="instruction">Инструкция</string>
+    <string name="start">Начать</string>
+
+    <string name="instruction_focusing"> В этом тесте вверху экрана появится повернутое в определенную сторону кольцо. Нужно смотреть на первую строчку из колец и выбирать кнопками внизу количество совпадающих по направлению колец, после нажатия строчка пропадает и остальные сдвигаются вверх. </string>
+    <string name="instruction_attention_stability"> На экране будут меняться цифры. В какой-то момент появится красный квадрат, который закроет цифру. После этого снова появится цифра, которую нужно увидеть и нажать левую кнопку, если цифра четная, или правую кнопку, если цифра нечетная. Цифра появится лишь на короткое время, и за ней сразу последует другой красный квадрат.</string>
+    <string name="instruction_stress_resistance">Зеленый свет будет перемещаться между элементами. С некоторой вероятностью он может переместиться сразу через элемент, в этот момент нужно нажимать на кнопку.</string>
+    <string name="landingScreenTitle">Стартовая страница</string>
+    <string name="info">Профиль</string>
+    <string name="testing">Тестирование</string>
+    <string name="statistics">Статистика</string>
+    <string name="settings">Настройки</string>
+    <string name="exit">Выйти</string>
+    <string name="back">Назад</string>
+    <string name="save2">Сохранить</string>
+    <string name="enterEmail">Введите email</string>
+    <string name="easy">Начальный</string>
+    <string name="medium">Средний</string>
+    <string name="hard">Продвинутый</string>
+    <string name="settings_level">Уровень сложности:</string>
+    <string name="landingText">Развивай свои внимание и концентрацию, следи за своими показателями</string>
+    <string name="email">Email</string>
+    <string name="pass">Пароль</string>
+    <string name="confirmPass">Повторите пароль</string>
+    <string name="emptyError">Пустое поле</string>
+    <string name="confirmPassError">Пароли не совпадают</string>
+    <string name="age">Возраст</string>
+    <string name="time">Время использования телефона</string>
+    <string name="tests">Тестирование</string>
+    <string name="profile">Профиль</string>
+    <string name="timeInDay">Количество часов в день</string>
+    <string name="emptyStatisticsMessage">Статистика пока недоступна, сначала пройдите тесты</string>
+    <string name="misses">Количество промахов:</string>
+    <string name="words_json">wordsapi_sample.json</string>
+</resources>

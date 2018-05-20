@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/instructionBackground"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <RelativeLayout
+            android:id="@+id/testsButton"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.45"
+            android:background="@drawable/round_button">
+
+            <ImageView
+                android:id="@+id/testsImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/test" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/testsImage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/tests"
+                android:textColor="@color/toolbarColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/statisticsButton"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.45"
+            android:background="@drawable/round_button">
+
+            <ImageView
+                android:id="@+id/statisticsImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/statistic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statisticsImage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/statistics"
+                android:textColor="@color/toolbarColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/profileButton"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.45"
+            android:background="@drawable/round_button">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/profile"
+                android:textColor="@color/toolbarColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/settingsButton"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="0.45"
+            android:background="@drawable/round_button">
+
+            <ImageView
+                android:id="@+id/settingsImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settingsImage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/settings"
+                android:textColor="@color/toolbarColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

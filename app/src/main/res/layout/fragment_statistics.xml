@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/emptyStatisticsMessage"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/contentSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/focusingSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/focusingTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/focusingResultsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stabilitySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/attentionStabilityTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/stabilityResultsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stressSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/stressResistanceTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/stressResultsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/englishSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/englishTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/englishResultsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

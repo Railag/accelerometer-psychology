@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/instructionBackground"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/instructionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="@string/attentionStabilityTitle"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/instructionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructionTitle"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/instruction_attention_stability"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/instructionImage"
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:layout_below="@id/instructionText"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/test3" />
+
+
+    <Button
+        android:id="@+id/startButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructionImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/start"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

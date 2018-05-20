@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/baseCircle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/circle" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/circlesGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/baseCircle"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+
+    <LinearLayout
+        android:id="@+id/buttonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/one" />
+
+        <Button
+            android:id="@+id/button2"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/two" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/three" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/four" />
+
+        <Button
+            android:id="@+id/button5"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/five" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonBar"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button6"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/six" />
+
+        <Button
+            android:id="@+id/button7"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/seven" />
+
+        <Button
+            android:id="@+id/button8"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/eight" />
+
+        <Button
+            android:id="@+id/button9"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/nine" />
+
+        <Button
+            android:id="@+id/button10"
+            style="?android:buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:background="@android:color/darker_gray"
+            android:text="@string/ten" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

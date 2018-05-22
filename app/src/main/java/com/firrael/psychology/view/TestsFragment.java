@@ -32,20 +32,17 @@ public class TestsFragment extends SimpleFragment {
         return R.layout.fragment_tests;
     }
 
-    @OnClick({R.id.focusingButton, R.id.attentionStabilityButton, R.id.stressResistanceButton, R.id.englishButton})
+    @OnClick({R.id.ramVolumeButton, R.id.attentionStabilityButton, R.id.stressResistanceButton})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.focusingButton:
-                getMainActivity().toInstructionFragment(InstructionFragment.Test.FOCUSING);
+            case R.id.ramVolumeButton:
+                getMainActivity().toInstructionFragment(InstructionFragment.Test.RAMVolume);
                 break;
             case R.id.attentionStabilityButton:
                 getMainActivity().toInstructionFragment(InstructionFragment.Test.ATTENTION_STABILITY);
                 break;
             case R.id.stressResistanceButton:
                 getMainActivity().toInstructionFragment(InstructionFragment.Test.STRESS_RESISTANCE);
-                break;
-            case R.id.englishButton:
-                getMainActivity().toInstructionFragment(InstructionFragment.Test.ENGLISH);
                 break;
         }
     }

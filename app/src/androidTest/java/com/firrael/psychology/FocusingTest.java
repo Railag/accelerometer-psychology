@@ -34,7 +34,7 @@ public class FocusingTest {
         relativeLayout.perform(click());
 
         ViewInteraction appCompatTextView = onView(
-                allOf(withId(R.id.focusingButton), withText("Концентрация внимания"), isDisplayed()));
+                allOf(withId(R.id.ramVolumeButton), withText("Концентрация внимания"), isDisplayed()));
         appCompatTextView.perform(click());
 
         ViewInteraction appCompatButton = onView(

@@ -6,11 +6,11 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/focusingButton"
+        android:id="@+id/ramVolumeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="@string/focusingTestTitle"
+        android:text="@string/ramVolumeTestTitle"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -39,20 +39,6 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="@string/stressResistanceTestTitle"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/separatorGrey" />
-
-    <TextView
-        android:id="@+id/englishButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="@string/englishTestTitle"
         android:textColor="@color/black"
         android:textSize="20sp" />
 

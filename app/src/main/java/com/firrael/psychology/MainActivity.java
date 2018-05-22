@@ -45,7 +45,7 @@ import com.firrael.psychology.view.results.RAMVolumeResultsFragment;
 import com.firrael.psychology.view.results.ResultScreen;
 import com.firrael.psychology.view.results.StressResistanceResultsFragment;
 import com.firrael.psychology.view.tests.AttentionStabilityTestFragment;
-import com.firrael.psychology.view.tests.FocusingTestFragment;
+import com.firrael.psychology.view.tests.RAMVolumeTestFragment;
 import com.firrael.psychology.view.tests.StressResistanceTestFragment;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.wang.avi.AVLoadingIndicatorView;
@@ -302,6 +302,7 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
                     if (currentX < thresholdMin && currentX > -thresholdMin && currentY < thresholdMin && currentY > -thresholdMin) {
                         Log.i(BLUETOOTH_TAG, "onMinThreshold");
                         bluetoothLock = false;
+                        listener.onCenter();
                     }
 
                     if (bluetoothLock) {
@@ -473,7 +474,7 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
         runOnUiThread(() -> {
             stopLoading();
             connected = true;
-            toStart();
+            toMenu();
         });
 
         connectedThread = new ConnectedThread(socket);
@@ -756,8 +757,8 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
         setFragment(InstructionFragment.newInstance(test));
     }
 
-    public void toFocusingTest() {
-        setFragment(FocusingTestFragment.newInstance());
+    public void toRAMVolumeTest() {
+        setFragment(RAMVolumeTestFragment.newInstance());
     }
 
     public void toAttentionStabilityTest() {

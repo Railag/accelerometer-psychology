@@ -74,7 +74,7 @@ public class SplashFragment extends BaseFragment<SplashPresenter> {
         }
 
         User.save(result, getActivity());
-        getMainActivity().toMenu();
+        getMainActivity().toBluetoothSetupFragment(); // TODO replace to Bluetooth setup fragment
     }
 
     public void onError(Throwable error) {

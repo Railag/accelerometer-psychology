@@ -6,6 +6,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.firrael.psychology.BluetoothEventListener;
 import com.firrael.psychology.R;
@@ -34,8 +35,8 @@ import nucleus.factory.RequiresPresenter;
 @RequiresPresenter(RAMVolumeTestPresenter.class)
 public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> implements BluetoothEventListener {
 
-    private final static int[] backgroundIds = {R.id.background, R.id.background, R.id.background, R.id.background, R.id.background,
-            R.id.background, R.id.background, R.id.background, R.id.background, R.id.background};
+    private final static int[] backgroundIds = {R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background,
+            R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background};
 
     private final static int MAX_BACKGROUNDS = 10;
 
@@ -48,7 +49,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     ImageView[] signImages;
 
     @BindView(R.id.ramBackground)
-    ImageView ramBackground;
+    RelativeLayout ramBackground;
 
     @BindView(R.id.signsGrid)
     RecyclerView signsGrid;
@@ -57,6 +58,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
     int currentBackground = 0;
 
+    private int previousSelection;
     private int currentSignSelection;
 
     Random random = new Random();
@@ -154,7 +156,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
     private void setupBackground() {
         int backgroundNumber = random.nextInt(backgroundIds.length);
-        ramBackground.setImageResource(backgroundIds[backgroundNumber]);
+        ramBackground.setBackgroundResource(backgroundIds[backgroundNumber]);
     }
 
     private void nextBackground() {
@@ -244,7 +246,11 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     private void refreshSelection() {
-        // TODO draw selection background
+        signImages[previousSelection].setBackground(null);
+
+        previousSelection = currentSignSelection;
+
+        signImages[currentSignSelection].setBackgroundResource(R.drawable.outline);
     }
 
     @Override
@@ -288,5 +294,9 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
     @Override
     public void onBottomRight() {
+    }
+
+    @Override
+    public void onCenter() {
     }
 }

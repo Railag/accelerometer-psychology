@@ -26,7 +26,7 @@ public class InstructionFragment extends SimpleFragment {
     ImageView instructionImage;
 
     public enum Test {
-        FOCUSING,
+        RAMVolume,
         ATTENTION_STABILITY,
         STRESS_RESISTANCE,
         ENGLISH
@@ -42,7 +42,7 @@ public class InstructionFragment extends SimpleFragment {
         return fragment;
     }
 
-    private Test test = Test.FOCUSING;
+    private Test test = Test.RAMVolume;
 
     @Override
     protected String getTitle() {
@@ -67,8 +67,8 @@ public class InstructionFragment extends SimpleFragment {
             int drawableId = 0;
 
             switch (test) {
-                case FOCUSING:
-                    title = getString(R.string.focusingTestTitle);
+                case RAMVolume:
+                    title = getString(R.string.ramVolumeTestTitle);
                     instruction = getString(R.string.instruction_focusing);
                     drawableId = R.drawable.test3;
                     break;
@@ -98,8 +98,8 @@ public class InstructionFragment extends SimpleFragment {
     @OnClick(R.id.startButton)
     public void start() {
         switch (test) {
-            case FOCUSING:
-                getMainActivity().toFocusingTest();
+            case RAMVolume:
+                getMainActivity().toRAMVolumeTest();
                 break;
             case ATTENTION_STABILITY:
                 getMainActivity().toAttentionStabilityTest();

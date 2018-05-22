@@ -35,7 +35,7 @@ public class AccelerometerTestPresenter extends BasePresenter<BluetoothSetupFrag
     @Override
     protected void onCreate(Bundle savedState) {
         super.onCreate(savedState);
-
+/*
         RConnectorService service = App.restService();
 
         restartableLatestCache(REQUEST_RESULTS_ACCELEROMETER,
@@ -43,16 +43,16 @@ public class AccelerometerTestPresenter extends BasePresenter<BluetoothSetupFrag
                         .subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread()),
                 BluetoothSetupFragment::onSuccess,
-                BluetoothSetupFragment::onError);
+                BluetoothSetupFragment::onError);*/
     }
 
     public void save(ArrayList<Double> x, ArrayList<Double> y) {
-        this.userId = User.get(App.getMainActivity()).getId();
+/*        this.userId = User.get(App.getMainActivity()).getId();
         this.x = x;
         this.y = y;
 
         Log.i(TAG, "Upload:" + x);
 
-        start(REQUEST_RESULTS_ACCELEROMETER);
+        start(REQUEST_RESULTS_ACCELEROMETER);*/
     }
 }

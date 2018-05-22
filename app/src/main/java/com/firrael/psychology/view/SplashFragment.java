@@ -46,7 +46,7 @@ public class SplashFragment extends BaseFragment<SplashPresenter> {
                 Handler handler = new Handler();
                 handler.postDelayed(() -> {
                     stopLoading();
-                    getMainActivity().toStart();
+                    getMainActivity().toBluetoothSetupFragment();
                 }, 3500);
             }
         }

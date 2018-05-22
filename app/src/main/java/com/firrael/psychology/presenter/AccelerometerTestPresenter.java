@@ -6,7 +6,7 @@ import android.util.Log;
 import com.firrael.psychology.App;
 import com.firrael.psychology.RConnectorService;
 import com.firrael.psychology.model.User;
-import com.firrael.psychology.view.tests.AccelerometerTestFragment;
+import com.firrael.psychology.view.BluetoothSetupFragment;
 
 import java.util.ArrayList;
 
@@ -20,8 +20,8 @@ import static com.firrael.psychology.Requests.REQUEST_RESULTS_ACCELEROMETER;
  * Created by railag on 26.02.2018.
  */
 
-public class AccelerometerTestPresenter extends BasePresenter<AccelerometerTestFragment> {
-    private final static String TAG = AccelerometerTestFragment.class.getSimpleName();
+public class AccelerometerTestPresenter extends BasePresenter<BluetoothSetupFragment> {
+    private final static String TAG = BluetoothSetupFragment.class.getSimpleName();
 
     @State
     long userId;
@@ -42,8 +42,8 @@ public class AccelerometerTestPresenter extends BasePresenter<AccelerometerTestF
                 () -> service.sendAccelerometerResults(userId, x, y)
                         .subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread()),
-                AccelerometerTestFragment::onSuccess,
-                AccelerometerTestFragment::onError);
+                BluetoothSetupFragment::onSuccess,
+                BluetoothSetupFragment::onError);
     }
 
     public void save(ArrayList<Double> x, ArrayList<Double> y) {

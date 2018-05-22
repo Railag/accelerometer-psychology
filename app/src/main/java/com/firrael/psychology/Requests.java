@@ -15,4 +15,5 @@ public class Requests {
     public static final int REQUEST_STATISTICS = 9;
     public static final int REQUEST_RESULTS_ENGLISH = 10;
     public static final int REQUEST_RESULTS_ACCELEROMETER = 11;
+    public static final int REQUEST_RESULTS_RAM = 12;
 }

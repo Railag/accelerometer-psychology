@@ -21,7 +21,7 @@
     <string name="focusingTestTitle">Концентрация внимания</string>
     <string name="stressResistanceTestTitle">Стрессоустойчивость</string>
     <string name="englishTestTitle">Английские слова</string>
-    <string name="accelerometerTestTitle">Акселерометр</string>
+    <string name="bluetoothSetupTitle">Установка соединения</string>
 
     <string name="one">1</string>
     <string name="two">2</string>
@@ -35,6 +35,8 @@
     <string name="ten">10</string>
     <string name="resultsTitle">Результаты</string>
     <string name="linesCount">Всего строк:</string>
+    <string name="timeCount">Затраченное на выбор время:</string>
+    <string name="rightCount">Верных выборов:</string>
     <string name="errorsCount">Количество ошибок:</string>
     <string name="missesCount">Количество пропущенных:</string>
     <string name="save">Сохранить</string>
@@ -73,4 +75,5 @@
     <string name="emptyStatisticsMessage">Статистика пока недоступна, сначала пройдите тесты</string>
     <string name="misses">Количество промахов:</string>
     <string name="words_json">wordsapi_sample.json</string>
+    <string name="ramVolumeTestTitle">Объем оперативной памяти</string>
 </resources>

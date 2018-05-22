@@ -31,7 +31,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -57,6 +56,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-crash:15.0.2'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.1'
     implementation 'net.hockeyapp.android:HockeySDK:5.0.0'
-
-    apply plugin: 'com.google.gms.google-services'
 }
+apply plugin: 'com.google.gms.google-services'

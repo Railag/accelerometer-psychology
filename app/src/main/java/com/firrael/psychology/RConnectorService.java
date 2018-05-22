@@ -62,6 +62,10 @@ public interface RConnectorService {
                                                 @Field("y[]") ArrayList<Double> y);
 
     @FormUrlEncoded
+    @POST("/user/results_ram_volume")
+    Observable<Result> sendRAMVolumeResults(@Field("user_id") long userId, @Field("time") Double time, @Field("wins") long wins);
+
+    @FormUrlEncoded
     @POST("/user/statistics")
     Observable<StatisticsResult> fetchStatistics(@Field("user_id") long userId);
 }

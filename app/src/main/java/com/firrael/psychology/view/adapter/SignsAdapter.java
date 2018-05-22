@@ -47,7 +47,7 @@ public class SignsAdapter extends RecyclerView.Adapter<SignsAdapter.ViewHolder> 
         holder.sign.setImageResource(sign.getDrawableId());
         holder.sign.setOnClickListener(v -> listener.onSignSelected(sign));
 
-        if (holder.sign.isSelected()) {
+        if (sign.isSelected()) {
             holder.sign.setBackgroundResource(R.drawable.outline);
         } else {
             holder.sign.setBackground(null);

@@ -182,6 +182,10 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     private void toFinalSelection() {
+        for (ImageView sign : signImages) {
+            sign.setVisibility(View.GONE);
+        }
+
         time = System.nanoTime();
 
         Sign mostVisibleSign = signsCounter.get(0);
@@ -190,6 +194,8 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
                 mostVisibleSign = sign;
             }
         }
+
+        signsCounter.get(0).setSelected(true);
 
         final int maxCounter = mostVisibleSign.getCounter();
 

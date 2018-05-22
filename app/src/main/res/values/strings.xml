@@ -22,6 +22,8 @@
     <string name="stressResistanceTestTitle">Стрессоустойчивость</string>
     <string name="englishTestTitle">Английские слова</string>
     <string name="bluetoothSetupTitle">Установка соединения</string>
+    <string name="ramVolumeTestTitle">Объем оперативной памяти</string>
+
 
     <string name="one">1</string>
     <string name="two">2</string>
@@ -75,5 +77,4 @@
     <string name="emptyStatisticsMessage">Статистика пока недоступна, сначала пройдите тесты</string>
     <string name="misses">Количество промахов:</string>
     <string name="words_json">wordsapi_sample.json</string>
-    <string name="ramVolumeTestTitle">Объем оперативной памяти</string>
 </resources>

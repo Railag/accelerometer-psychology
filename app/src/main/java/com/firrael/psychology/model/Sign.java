@@ -80,6 +80,8 @@ public enum Sign {
 
     private int counter;
 
+    private boolean isSelected;
+
     public int getCounter() {
         return counter;
     }
@@ -112,6 +114,14 @@ public enum Sign {
     private static <T extends Enum<?>> T randomEnum(Class<T> clazz) {
         int x = random.nextInt(clazz.getEnumConstants().length);
         return clazz.getEnumConstants()[x];
+    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
     }
 }
 

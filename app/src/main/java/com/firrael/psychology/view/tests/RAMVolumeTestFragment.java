@@ -246,11 +246,12 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     private void refreshSelection() {
-        signImages[previousSelection].setBackground(null);
+        signsCounter.get(previousSelection).setSelected(false);
+        signsCounter.get(currentSignSelection).setSelected(true);
 
         previousSelection = currentSignSelection;
 
-        signImages[currentSignSelection].setBackgroundResource(R.drawable.outline);
+        signsAdapter.notifyDataSetChanged();
     }
 
     @Override

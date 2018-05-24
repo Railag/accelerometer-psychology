@@ -280,7 +280,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     @Override
     public void onTop() {
         if (isSelection) {
-            if (currentSignSelection > SIGNS_PER_LINE) {
+            if (currentSignSelection >= SIGNS_PER_LINE) {
                 currentSignSelection -= SIGNS_PER_LINE;
                 refreshSelection();
             }

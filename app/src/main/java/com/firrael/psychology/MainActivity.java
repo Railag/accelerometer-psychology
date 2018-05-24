@@ -80,13 +80,13 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
     private final static int REQUEST_ENABLE_BT = 101;
 
     private final static int DEGREES_MIN = 1;
-    private final static int DEGREES_MAX = 3;
+    private final static int DEGREES_MAX = 30;
 
     private final static String BLUETOOTH_TAG = "Bluetooth";
     public final static double THRESHOLD_ACCELEROMETER_MAX = 7.0;
     private final static double THRESHOLD_ACCELEROMETER_MIN = 1.0;
 
-    private Handler handler;
+    private Handler handler = new Handler();
     private final static int INTERVAL = 10;
 
     private int counter = 0;
@@ -187,14 +187,20 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
     }
 
     private void prepareBluetoothData() {
-        thresholdMin = calculateThreshold(DEGREES_MIN);
-        thresholdMax = calculateThreshold(DEGREES_MAX);
+        thresholdMin = calculateThresholdX(DEGREES_MAX);
+        thresholdMax = calculateThresholdY(DEGREES_MAX);
     }
 
-    private static double calculateThreshold(int degrees) { // 3 degrees - ?
+    private double calculateThresholdX(int degrees) { // 3 degrees - ?
         // 90 degrees - MAX_THRESHOLD (7.0)
         double thresholdValue = degrees * THRESHOLD_ACCELEROMETER_MAX / 90.0;
-        Log.i(BLUETOOTH_TAG, "Threshold value: " + thresholdValue);
+        Log.i(BLUETOOTH_TAG, "Threshold value X: " + thresholdValue);
+        return thresholdValue;
+    }
+
+    private double calculateThresholdY(int degrees) {
+        double thresholdValue = degrees * THRESHOLD_ACCELEROMETER_MAX / 90.0;
+        Log.i(BLUETOOTH_TAG, "Threshold value Y: " + thresholdValue);
         return thresholdValue;
     }
 
@@ -278,12 +284,12 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
 
             double[] xValues = new double[this.x.size()];
             for (int i = 0; i < this.x.size(); i++) {
-                xValues[i] = (double) adjust(this.x.get(i).floatValue(), realWidth, true);
+                xValues[i] = this.x.get(i);//(double) adjust(this.x.get(i).floatValue(), realWidth, true);
             }
 
             double[] yValues = new double[this.y.size()];
             for (int i = 0; i < this.y.size(); i++) {
-                yValues[i] = (double) adjust(this.y.get(i), realHeight, false);
+                yValues[i] = this.y.get(i); //(double) adjust(this.y.get(i), realHeight, false);
             }
 
             sendToBluetoothListeners(xValues, yValues);
@@ -313,34 +319,34 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
                         bluetoothLock = true;
                         Log.i(BLUETOOTH_TAG, "onLeft");
                         listener.onLeft();
-                    } else if (currentX > thresholdMax && currentY > thresholdMax) { // top left
-                        bluetoothLock = true;
-                        Log.i(BLUETOOTH_TAG, "onTopLeft");
-                        listener.onTopLeft();
-                    } else if (currentX > thresholdMax && currentY < -thresholdMax) { // bottom left
+                    } else if (currentX > thresholdMax && currentY > thresholdMax) { // bottom left
                         bluetoothLock = true;
                         Log.i(BLUETOOTH_TAG, "onBottomLeft");
                         listener.onBottomLeft();
+                    } else if (currentX > thresholdMax && currentY < -thresholdMax) { // top left
+                        bluetoothLock = true;
+                        Log.i(BLUETOOTH_TAG, "onTopLeft");
+                        listener.onTopLeft();
                     } else if (currentX < -thresholdMax && currentY < thresholdMax && currentY > -thresholdMax) { // right
                         bluetoothLock = true;
                         Log.i(BLUETOOTH_TAG, "onRight");
                         listener.onRight();
-                    } else if (currentX < -thresholdMax && currentY > thresholdMax) { // top right
-                        bluetoothLock = true;
-                        Log.i(BLUETOOTH_TAG, "onTopRight");
-                        listener.onTopRight();
-                    } else if (currentX < -thresholdMax && currentY < -thresholdMax) { // bottom right
+                    } else if (currentX < -thresholdMax && currentY > thresholdMax) { // bottom right
                         bluetoothLock = true;
                         Log.i(BLUETOOTH_TAG, "onBottomRight");
                         listener.onBottomRight();
-                    } else if (currentY > thresholdMax && currentX < thresholdMax && currentX > -thresholdMax) { // top
+                    } else if (currentX < -thresholdMax && currentY < -thresholdMax) { // top right
                         bluetoothLock = true;
-                        Log.i(BLUETOOTH_TAG, "onTop");
-                        listener.onTop();
-                    } else if (currentY < -thresholdMax && currentX < thresholdMax && currentX > -thresholdMax) { // bottom
+                        Log.i(BLUETOOTH_TAG, "onTopRight");
+                        listener.onTopRight();
+                    } else if (currentY > thresholdMax && currentX < thresholdMax && currentX > -thresholdMax) { // bottom
                         bluetoothLock = true;
                         Log.i(BLUETOOTH_TAG, "onBottom");
                         listener.onBottom();
+                    } else if (currentY < -thresholdMax && currentX < thresholdMax && currentX > -thresholdMax) { // top
+                        bluetoothLock = true;
+                        Log.i(BLUETOOTH_TAG, "onTop");
+                        listener.onTop();
                     }
 
                 }
@@ -404,6 +410,11 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
 
         if (currentFragment instanceof MenuFragment || currentFragment instanceof StartFragment) {
             finish();
+            return;
+        }
+
+        if (currentFragment instanceof BluetoothSetupFragment) { // TODO DEBUG
+            toMenu();
             return;
         }
 
@@ -589,7 +600,7 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
                     Log.i(TAG, isX ? "X: " : "Y: " + value);
 
                     addValue(value);
-                    if (i == PACKAGE_SIZE) {
+                    if (i == PACKAGE_SIZE - 1) {
                         isX = false;
                     }
                 }

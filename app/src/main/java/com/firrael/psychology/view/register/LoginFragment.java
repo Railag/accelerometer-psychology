@@ -77,7 +77,7 @@ public class LoginFragment extends BaseFragment<LoginPresenter> {
             return;
         }
         User.save(result, getActivity());
-        getMainActivity().toMenu();
+        getMainActivity().toBluetoothSetupFragment();
     }
 
     public void onError(Throwable error) {

@@ -75,6 +75,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     private double resultTime;
     private long winsCount;
     private SignsAdapter.OnSignClickListener listener;
+    private boolean isSelection;
 
     public static RAMVolumeTestFragment newInstance() {
 
@@ -182,6 +183,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     private void toFinalSelection() {
+        isSelection = true;
         for (ImageView sign : signImages) {
             sign.setVisibility(View.GONE);
         }
@@ -245,9 +247,11 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
     @Override
     public void onLeft() {
-        if (currentSignSelection > 0) {
-            currentSignSelection--;
-            refreshSelection();
+        if (isSelection) {
+            if (currentSignSelection > 0) {
+                currentSignSelection--;
+                refreshSelection();
+            }
         }
     }
 
@@ -257,30 +261,38 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
         previousSelection = currentSignSelection;
 
-        signsAdapter.notifyDataSetChanged();
+        if (signsAdapter != null) {
+            signsAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
     public void onRight() {
-        if (currentSignSelection < signsCounter.size()) {
-            currentSignSelection++;
-            refreshSelection();
+        if (isSelection) {
+            if (currentSignSelection < signsCounter.size() - 1) {
+                currentSignSelection++;
+                refreshSelection();
+            }
         }
     }
 
     @Override
     public void onTop() {
-        if (currentSignSelection > SIGNS_PER_LINE) {
-            currentSignSelection -= SIGNS_PER_LINE;
-            refreshSelection();
+        if (isSelection) {
+            if (currentSignSelection > SIGNS_PER_LINE) {
+                currentSignSelection -= SIGNS_PER_LINE;
+                refreshSelection();
+            }
         }
     }
 
     @Override
     public void onBottom() {
-        if (currentSignSelection + SIGNS_PER_LINE < signsCounter.size()) {
-            currentSignSelection += SIGNS_PER_LINE;
-            refreshSelection();
+        if (isSelection) {
+            if (currentSignSelection + SIGNS_PER_LINE < signsCounter.size() - 1) {
+                currentSignSelection += SIGNS_PER_LINE;
+                refreshSelection();
+            }
         }
     }
 
@@ -290,8 +302,10 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
 
     @Override
     public void onTopRight() {
-        if (listener != null) {
-            listener.onSignSelected(signsCounter.get(currentSignSelection));
+        if (isSelection) {
+            if (listener != null) {
+                listener.onSignSelected(signsCounter.get(currentSignSelection));
+            }
         }
     }
 

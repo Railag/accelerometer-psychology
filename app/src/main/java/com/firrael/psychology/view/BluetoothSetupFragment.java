@@ -54,6 +54,13 @@ public class BluetoothSetupFragment extends BaseFragment<AccelerometerTestPresen
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        getMainActivity().blueTop();
+
+        return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
+    protected void initView(View v) {
         adapter = new BluetoothDeviceAdapter();
 
         List<BluetoothDevice> pairedDevices = getMainActivity().getPairedDevices();
@@ -66,6 +73,5 @@ public class BluetoothSetupFragment extends BaseFragment<AccelerometerTestPresen
 
         list.setAdapter(adapter);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
     }
 }

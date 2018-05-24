@@ -183,7 +183,6 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     private void toFinalSelection() {
-        isSelection = true;
         for (ImageView sign : signImages) {
             sign.setVisibility(View.GONE);
         }
@@ -220,6 +219,8 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
         signsGrid.setLayoutManager(manager);
 
         signsGrid.setAdapter(signsAdapter);
+
+        isSelection = true;
     }
 
     public void onSuccess(Result result) {

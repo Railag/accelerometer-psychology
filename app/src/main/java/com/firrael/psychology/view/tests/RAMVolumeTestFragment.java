@@ -54,7 +54,7 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     @BindView(R.id.signsGrid)
     RecyclerView signsGrid;
 
-    List<Sign> signsCounter = Arrays.asList(Sign.values());
+    List<Sign> signsCounter;
 
     int currentBackground = 0;
 
@@ -64,8 +64,6 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     Random random = new Random();
 
     private Handler handler;
-
-    private boolean action = false;
 
     private long time;
     private ArrayList<Answer> answers = new ArrayList<>();
@@ -100,7 +98,11 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     protected void initView(View v) {
         handler = new Handler();
 
-        getMainActivity().registerBluetoothListener(this);
+        signsCounter = Arrays.asList(Sign.values());
+        for (Sign sign : signsCounter) {
+            sign.reset();
+            sign.setSelected(false);
+        }
 
         next();
     }
@@ -171,14 +173,27 @@ public class RAMVolumeTestFragment extends BaseFragment<RAMVolumeTestPresenter> 
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if (getMainActivity() != null) {
+            getMainActivity().registerBluetoothListener(this);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (getMainActivity() != null) {
+            getMainActivity().unregisterBluetoothListener(this);
+        }
+    }
+
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (handler != null) {
             handler.removeCallbacksAndMessages(null);
-        }
-
-        if (getMainActivity() != null) {
-            getMainActivity().unregisterBluetoothListener(this);
         }
     }
 

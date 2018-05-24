@@ -72,6 +72,5 @@ public class BluetoothSetupFragment extends BaseFragment<AccelerometerTestPresen
         list.setLayoutManager(manager);
 
         list.setAdapter(adapter);
-
     }
 }

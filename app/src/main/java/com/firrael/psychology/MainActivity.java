@@ -306,7 +306,7 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
                     double currentY = yValues[i];
 
                     if (currentX < thresholdMin && currentX > -thresholdMin && currentY < thresholdMin && currentY > -thresholdMin) {
-                        Log.i(BLUETOOTH_TAG, "onMinThreshold");
+                        Log.i(BLUETOOTH_TAG, "onCenter");
                         bluetoothLock = false;
                         listener.onCenter();
                     }
@@ -434,6 +434,7 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode == Activity.RESULT_OK) {
                 initBluetooth();
+                toBluetoothSetupFragment();
             }
         }
     }

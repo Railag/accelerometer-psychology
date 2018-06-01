@@ -23,6 +23,8 @@
     <string name="englishTestTitle">Английские слова</string>
     <string name="bluetoothSetupTitle">Установка соединения</string>
     <string name="ramVolumeTestTitle">Объем оперативной памяти</string>
+    <string name="attentionVolumeTestTitle">Объем оперативной памяти</string>
+
 
 
     <string name="one">1</string>

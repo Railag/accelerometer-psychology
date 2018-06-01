@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.firrael.psychology.App;
+import com.firrael.psychology.BluetoothEventListener;
 import com.firrael.psychology.R;
 import com.firrael.psychology.Utils;
 import com.firrael.psychology.model.Answer;
@@ -26,12 +27,9 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import nucleus.factory.RequiresPresenter;
 
-/**
- * Created by Railag on 30.03.2017.
- */
 
 @RequiresPresenter(StressResistanceTestPresenter.class)
-public class StressResistanceTestFragment extends BaseFragment<StressResistanceTestPresenter> {
+public class StressResistanceTestFragment extends BaseFragment<StressResistanceTestPresenter> implements BluetoothEventListener {
 
     @BindView(R.id.circle1)
     ImageView circle1;
@@ -260,5 +258,66 @@ public class StressResistanceTestFragment extends BaseFragment<StressResistanceT
     public void onError(Throwable throwable) {
         stopLoading();
         throwable.printStackTrace();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getMainActivity() != null) {
+            getMainActivity().registerBluetoothListener(this);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (getMainActivity() != null) {
+            getMainActivity().unregisterBluetoothListener(this);
+        }
+    }
+
+    @Override
+    public void onLeft() {
+
+    }
+
+    @Override
+    public void onRight() {
+
+    }
+
+    @Override
+    public void onTop() {
+
+    }
+
+    @Override
+    public void onBottom() {
+        click();
+    }
+
+    @Override
+    public void onTopLeft() {
+
+    }
+
+    @Override
+    public void onTopRight() {
+
+    }
+
+    @Override
+    public void onBottomLeft() {
+
+    }
+
+    @Override
+    public void onBottomRight() {
+
+    }
+
+    @Override
+    public void onCenter() {
+
     }
 }

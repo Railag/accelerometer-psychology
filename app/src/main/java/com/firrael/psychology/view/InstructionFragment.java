@@ -27,9 +27,9 @@ public class InstructionFragment extends SimpleFragment {
 
     public enum Test {
         RAMVolume,
+        RAMVolume2,
         ATTENTION_STABILITY,
-        STRESS_RESISTANCE,
-        ENGLISH
+        STRESS_RESISTANCE
     }
 
     public static InstructionFragment newInstance(Test test) {
@@ -72,6 +72,11 @@ public class InstructionFragment extends SimpleFragment {
                     instruction = getString(R.string.instruction_focusing);
                     drawableId = R.drawable.test3;
                     break;
+                case RAMVolume2:
+                    title = getString(R.string.ramVolumeTestTitle);
+                    instruction = getString(R.string.instruction_focusing);
+                    drawableId = R.drawable.test;
+                    break;
                 case ATTENTION_STABILITY:
                     title = getString(R.string.attentionStabilityTitle);
                     instruction = getString(R.string.instruction_attention_stability);
@@ -81,11 +86,6 @@ public class InstructionFragment extends SimpleFragment {
                     title = getString(R.string.stressResistanceTestTitle);
                     instruction = getString(R.string.instruction_stress_resistance);
                     drawableId = R.drawable.test4;
-                    break;
-                case ENGLISH:
-                    title = getString(R.string.englishTestTitle);
-                    instruction = getString(R.string.instruction_attention_stability);
-                    drawableId = R.drawable.test;
                     break;
             }
 
@@ -107,8 +107,8 @@ public class InstructionFragment extends SimpleFragment {
             case STRESS_RESISTANCE:
                 getMainActivity().toStressResistanceTest();
                 break;
-            case ENGLISH:
-                getMainActivity().toEnglishTest();
+            case RAMVolume2:
+                getMainActivity().toAttentionVolumeTest();
                 break;
         }
     }

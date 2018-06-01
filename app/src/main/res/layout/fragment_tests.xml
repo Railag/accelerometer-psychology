@@ -20,6 +20,20 @@
         android:background="@color/separatorGrey" />
 
     <TextView
+        android:id="@+id/ramVolume2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="@string/attentionVolumeTestTitle"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separatorGrey" />
+
+    <TextView
         android:id="@+id/attentionStabilityButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

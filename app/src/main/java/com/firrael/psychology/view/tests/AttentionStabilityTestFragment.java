@@ -1,6 +1,5 @@
 package com.firrael.psychology.view.tests;
 
-import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -8,10 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.firrael.psychology.AccelerometerListener;
 import com.firrael.psychology.App;
+import com.firrael.psychology.BluetoothEventListener;
 import com.firrael.psychology.R;
 import com.firrael.psychology.Utils;
 import com.firrael.psychology.model.Answer;
@@ -28,12 +26,9 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import nucleus.factory.RequiresPresenter;
 
-/**
- * Created by Railag on 06.03.2017.
- */
 
 @RequiresPresenter(AttentionStabilityTestPresenter.class)
-public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabilityTestPresenter> implements AccelerometerListener {
+public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabilityTestPresenter> implements BluetoothEventListener {
 
     private final static int MAX_NUMBER = 10;
 
@@ -63,7 +58,6 @@ public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabil
     private long time;
 
     private ArrayList<Answer> answers = new ArrayList<>();
-    private SensorEventListener sensorListener;
 
     public static AttentionStabilityTestFragment newInstance() {
 
@@ -187,7 +181,7 @@ public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabil
 
         active = false;
 
-    //    Toast.makeText(getActivity(), "Wins = " + wins + ", Fails = " + errors, Toast.LENGTH_SHORT).show();
+        //    Toast.makeText(getActivity(), "Wins = " + wins + ", Fails = " + errors, Toast.LENGTH_SHORT).show();
     }
 
     private int generateRandomNumber() {
@@ -236,6 +230,23 @@ public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabil
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        if (getMainActivity() != null) {
+            getMainActivity().registerBluetoothListener(this);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (getMainActivity() != null) {
+            getMainActivity().unregisterBluetoothListener(this);
+        }
+    }
+
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         if (handler != null) {
@@ -243,17 +254,6 @@ public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabil
         }
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        sensorListener = Utils.registerSensor(getActivity(), this, 1, 3);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Utils.unregisterSensor(getActivity(), sensorListener);
-    }
 
     @Override
     public void onLeft() {
@@ -268,11 +268,31 @@ public class AttentionStabilityTestFragment extends BaseFragment<AttentionStabil
     }
 
     @Override
-    public void onMinThreshold() {
-        testBackground.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+    public void onTop() {
     }
 
     @Override
-    public void onUpdate(double x, double y, double z) {
+    public void onBottom() {
+    }
+
+    @Override
+    public void onTopLeft() {
+    }
+
+    @Override
+    public void onTopRight() {
+    }
+
+    @Override
+    public void onBottomLeft() {
+    }
+
+    @Override
+    public void onBottomRight() {
+    }
+
+    @Override
+    public void onCenter() {
+        testBackground.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
     }
 }

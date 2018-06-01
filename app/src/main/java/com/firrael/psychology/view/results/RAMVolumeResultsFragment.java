@@ -138,11 +138,11 @@ public class RAMVolumeResultsFragment extends SimpleFragment implements ResultSc
 
         if (args != null) {
             if (args.containsKey(TIME)) {
-                time.setText(String.valueOf(args.getInt(TIME)));
+                time.setText(String.valueOf(args.getDouble(TIME)));
             }
 
             if (args.containsKey(WINS)) {
-                winsCount.setText(String.valueOf(args.getInt(WINS)));
+                winsCount.setText(String.valueOf(args.getLong(WINS)));
             }
         }
     }

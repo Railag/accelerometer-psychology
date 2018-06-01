@@ -45,10 +45,6 @@ public interface RConnectorService {
     Observable<Result> sendStressResults(@Field("user_id") long userId, @Field("times[]") ArrayList<Double> times, @Field("misses") long misses);
 
     @FormUrlEncoded
-    @POST("/user/results_focusing")
-    Observable<Result> sendFocusingResults(@Field("user_id") long userId, @Field("times[]") ArrayList<Double> times, @Field("error_values[]") ArrayList<Long> errors);
-
-    @FormUrlEncoded
     @POST("/user/results_stability")
     Observable<Result> sendAttentionStabilityResults(@Field("user_id") long userId, @Field("times[]") ArrayList<Double> times, @Field("misses") long misses, @Field("errors_value") long errors);
 
@@ -57,13 +53,12 @@ public interface RConnectorService {
     Observable<Result> sendEnglishResults(@Field("user_id") long userId, @Field("times[]") ArrayList<Double> times, @Field("words[]") ArrayList<String> words, @Field("errors_value") long errors);
 
     @FormUrlEncoded
-    @POST("/user/results_accelerometer")
-    Observable<Result> sendAccelerometerResults(@Field("user_id") long userId, @Field("x[]") ArrayList<Double> x,
-                                                @Field("y[]") ArrayList<Double> y);
-
-    @FormUrlEncoded
     @POST("/user/results_ram_volume")
     Observable<Result> sendRAMVolumeResults(@Field("user_id") long userId, @Field("time") Double time, @Field("wins") long wins);
+
+    @FormUrlEncoded
+    @POST("/user/results_attention_volume")
+    Observable<Result> sendAttentionVolumeResults(@Field("user_id") long userId, @Field("time") Double time, @Field("wins") long wins);
 
     @FormUrlEncoded
     @POST("/user/statistics")

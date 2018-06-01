@@ -39,12 +39,12 @@ import com.firrael.psychology.view.register.LoginFragment;
 import com.firrael.psychology.view.register.RegisterFragment;
 import com.firrael.psychology.view.register.TimeFragment;
 import com.firrael.psychology.view.results.AttentionStabilityResultsFragment;
-import com.firrael.psychology.view.results.EnglishResultsFragment;
-import com.firrael.psychology.view.results.FocusingResultsFragment;
+import com.firrael.psychology.view.results.AttentionVolumeResultsFragment;
 import com.firrael.psychology.view.results.RAMVolumeResultsFragment;
 import com.firrael.psychology.view.results.ResultScreen;
 import com.firrael.psychology.view.results.StressResistanceResultsFragment;
 import com.firrael.psychology.view.tests.AttentionStabilityTestFragment;
+import com.firrael.psychology.view.tests.AttentionVolumeTestFragment;
 import com.firrael.psychology.view.tests.RAMVolumeTestFragment;
 import com.firrael.psychology.view.tests.StressResistanceTestFragment;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -781,29 +781,21 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
         setFragment(StressResistanceTestFragment.newInstance());
     }
 
-    public void toEnglishTest() {
-        //    setFragment(EnglishTestFragment.newInstance());
-        toAccelerometerTest();
-    }
-
-    public void toAccelerometerTest() {
-        setFragment(BluetoothSetupFragment.newInstance());
-    }
-
-    public void toFocusingResults(Bundle args) {
-        setFragment(FocusingResultsFragment.newInstance(args));
+    public void toAttentionVolumeTest() {
+        setFragment(AttentionVolumeTestFragment.newInstance());
     }
 
     public void toAttentionStabilityResults(Bundle args) {
         setFragment(AttentionStabilityResultsFragment.newInstance(args));
     }
 
-    public void toStressResistanceResults(Bundle args) {
-        setFragment(StressResistanceResultsFragment.newInstance(args));
+    public void toAttentionVolumeResults(Bundle args) {
+        setFragment(AttentionVolumeResultsFragment.newInstance(args));
     }
 
-    public void toEnglishResults(Bundle args) {
-        setFragment(EnglishResultsFragment.newInstance(args));
+
+    public void toStressResistanceResults(Bundle args) {
+        setFragment(StressResistanceResultsFragment.newInstance(args));
     }
 
     public void toRAMVolumeResults(Bundle args) {

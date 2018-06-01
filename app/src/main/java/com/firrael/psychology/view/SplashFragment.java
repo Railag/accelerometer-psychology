@@ -46,7 +46,7 @@ public class SplashFragment extends BaseFragment<SplashPresenter> {
                 Handler handler = new Handler();
                 handler.postDelayed(() -> {
                     stopLoading();
-                    getMainActivity().toBluetoothSetupFragment();
+                    getMainActivity().toLogin();
                 }, 3500);
             }
         }
@@ -74,7 +74,7 @@ public class SplashFragment extends BaseFragment<SplashPresenter> {
         }
 
         User.save(result, getActivity());
-        getMainActivity().toBluetoothSetupFragment(); // TODO replace to Bluetooth setup fragment
+        getMainActivity().toBluetoothSetupFragment();
     }
 
     public void onError(Throwable error) {

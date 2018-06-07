@@ -5,6 +5,6 @@
     <solid android:color="@color/black" />
 
     <size
-        android:width="@dimen/stress_circle_size"
-        android:height="@dimen/stress_circle_size" />
+        android:width="@dimen/stability_circle_size"
+        android:height="@dimen/stability_circle_size" />
 </shape>

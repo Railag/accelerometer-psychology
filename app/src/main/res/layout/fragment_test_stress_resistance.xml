@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/circle1"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/circle2"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle1"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle1"
@@ -25,8 +25,8 @@
 
     <ImageView
         android:id="@+id/circle3"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle2"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle2"
@@ -34,8 +34,8 @@
 
     <ImageView
         android:id="@+id/circle4"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle3"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle3"
@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/circle5"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle4"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle4"
@@ -52,8 +52,8 @@
 
     <ImageView
         android:id="@+id/circle6"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle5"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle5"
@@ -61,8 +61,8 @@
 
     <ImageView
         android:id="@+id/circle7"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle6"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -71,8 +71,8 @@
 
     <ImageView
         android:id="@+id/circle8"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle7"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -81,8 +81,8 @@
 
     <ImageView
         android:id="@+id/circle9"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle8"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -91,8 +91,8 @@
 
     <ImageView
         android:id="@+id/circle10"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle9"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -101,8 +101,8 @@
 
     <ImageView
         android:id="@+id/circle11"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_below="@+id/circle10"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
@@ -111,8 +111,8 @@
 
     <ImageView
         android:id="@+id/circle12"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle11"
         android:layout_marginStart="10dp"
         android:layout_toStartOf="@+id/circle11"
@@ -120,8 +120,8 @@
 
     <ImageView
         android:id="@+id/circle13"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle12"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
@@ -130,8 +130,8 @@
 
     <ImageView
         android:id="@+id/circle14"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle13"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
@@ -140,8 +140,8 @@
 
     <ImageView
         android:id="@+id/circle15"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle14"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
@@ -150,8 +150,8 @@
 
     <ImageView
         android:id="@+id/circle16"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle15"
         android:layout_marginBottom="15dp"
         android:layout_marginStart="10dp"
@@ -160,8 +160,8 @@
 
     <ImageView
         android:id="@+id/circle17"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle16"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle16"
@@ -169,8 +169,8 @@
 
     <ImageView
         android:id="@+id/circle18"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle17"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle17"
@@ -178,8 +178,8 @@
 
     <ImageView
         android:id="@+id/circle19"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle18"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle18"
@@ -187,8 +187,8 @@
 
     <ImageView
         android:id="@+id/circle20"
-        android:layout_width="@dimen/stress_circle_size"
-        android:layout_height="@dimen/stress_circle_size"
+        android:layout_width="@dimen/stability_circle_size"
+        android:layout_height="@dimen/stability_circle_size"
         android:layout_above="@+id/circle19"
         android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/circle19"

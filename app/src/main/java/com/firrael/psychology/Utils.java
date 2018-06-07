@@ -15,9 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-/**
- * Created by Railag on 03.06.2016.
- */
 public class Utils {
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;

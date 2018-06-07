@@ -32,8 +32,8 @@ import nucleus.factory.RequiresPresenter;
 @RequiresPresenter(AttentionVolumeTestPresenter.class)
 public class AttentionVolumeTestFragment extends BaseFragment<AttentionVolumeTestPresenter> implements BluetoothEventListener {
 
-    private final static int[] backgroundIds = {R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background,
-            R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background, R.drawable.vertical_background};
+    private final static int[] backgroundIds = {R.drawable.background1, R.drawable.background2, R.drawable.background3, R.drawable.background4, R.drawable.background5,
+            R.drawable.background1, R.drawable.background2, R.drawable.background3, R.drawable.background4, R.drawable.background5};
 
     private final static int MAX_BACKGROUNDS = 1;
 

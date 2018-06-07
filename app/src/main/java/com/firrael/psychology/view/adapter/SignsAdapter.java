@@ -15,9 +15,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created by railag on 21.05.2018.
- */
 public class SignsAdapter extends RecyclerView.Adapter<SignsAdapter.ViewHolder> {
 
     public interface OnSignClickListener {

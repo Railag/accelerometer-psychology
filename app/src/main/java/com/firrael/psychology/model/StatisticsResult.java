@@ -26,6 +26,10 @@ public class StatisticsResult extends Result {
     public List<StressResults> stressResults;
     @SerializedName("english_results")
     public List<EnglishResults> englishResults;
+    @SerializedName("ram_volume_results")
+    public List<RAMResults1> ramResults1;
+    @SerializedName("attention_volume_results")
+    public List<RAMResults2> ramResults2;
 
     public static class ReactionResults implements Comparable<ReactionResults> {
         @SerializedName("id")
@@ -128,6 +132,34 @@ public class StatisticsResult extends Result {
         @Override
         public int compareTo(@NonNull EnglishResults englishResults) {
             return Integer.valueOf(id).compareTo(englishResults.id);
+        }
+    }
+
+    public static class RAMResults1 implements Comparable<RAMResults1> {
+        @SerializedName("id")
+        public int id;
+        @SerializedName("time")
+        public double time;
+        @SerializedName("wins")
+        public long wins;
+
+        @Override
+        public int compareTo(@NonNull RAMResults1 ramResults) {
+            return Integer.valueOf(id).compareTo(ramResults.id);
+        }
+    }
+
+    public static class RAMResults2 implements Comparable<RAMResults2> {
+        @SerializedName("id")
+        public int id;
+        @SerializedName("time")
+        public double time;
+        @SerializedName("wins")
+        public long wins;
+
+        @Override
+        public int compareTo(@NonNull RAMResults2 ramResults) {
+            return Integer.valueOf(id).compareTo(ramResults.id);
         }
     }
 }

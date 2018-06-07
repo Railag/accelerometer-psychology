@@ -34,47 +34,47 @@ public enum Sign {
     public int getDrawableId() {
         switch (this) {
             case TYPE1:
-                return R.drawable.complex_button_grey;
+                return R.drawable.sign1;
             case TYPE2:
-                return R.drawable.complex_button_yellow;
+                return R.drawable.sign2;
             case TYPE3:
-                return R.drawable.complex_button_red;
+                return R.drawable.sign3;
             case TYPE4:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign4;
             case TYPE5:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign5;
             case TYPE6:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign6;
             case TYPE7:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign7;
             case TYPE8:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign8;
             case TYPE9:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign9;
             case TYPE10:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign10;
             case TYPE11:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign11;
             case TYPE12:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign12;
             case TYPE13:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign13;
             case TYPE14:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign14;
             case TYPE15:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign15;
             case TYPE16:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign16;
             case TYPE17:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign17;
             case TYPE18:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign18;
             case TYPE19:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign19;
             case TYPE20:
-                return R.drawable.complex_button_green;
+                return R.drawable.sign20;
             default:
-                return R.drawable.complex_button_grey;
+                return R.drawable.sign1;
         }
     }
 

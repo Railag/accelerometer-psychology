@@ -9,27 +9,29 @@
         android:id="@+id/sign1"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="33dp"
         android:src="@drawable/circle_stress" />
 
     <ImageView
         android:id="@+id/sign2"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign1"
-        android:layout_marginStart="10dp"
         android:layout_toEndOf="@+id/sign1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="33dp"
         android:src="@drawable/circle_stress" />
 
     <ImageView
         android:id="@+id/sign3"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign2"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/sign2"
+        android:layout_below="@+id/sign1"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/sign1"
         android:src="@drawable/circle_stress" />
 
     <ImageView
@@ -37,7 +39,7 @@
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
         android:layout_below="@+id/sign3"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="50dp"
         android:layout_toEndOf="@+id/sign3"
         android:src="@drawable/circle_stress" />
 
@@ -46,7 +48,7 @@
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
         android:layout_below="@+id/sign4"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="30dp"
         android:layout_toEndOf="@+id/sign4"
         android:src="@drawable/circle_stress" />
 
@@ -54,28 +56,26 @@
         android:id="@+id/sign6"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign5"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/sign5"
+        android:layout_above="@+id/sign5"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@+id/sign4"
         android:src="@drawable/circle_stress" />
 
     <ImageView
         android:id="@+id/sign7"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign6"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_toStartOf="@+id/sign6"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="60dp"
+        android:layout_above="@+id/sign6"
         android:src="@drawable/circle_stress" />
 
     <ImageView
         android:id="@+id/sign8"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign7"
+        android:layout_above="@+id/sign7"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
         android:layout_toStartOf="@+id/sign7"
         android:src="@drawable/circle_stress" />
 
@@ -84,8 +84,7 @@
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
         android:layout_below="@+id/sign8"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
         android:layout_toStartOf="@+id/sign8"
         android:src="@drawable/circle_stress" />
 
@@ -94,9 +93,8 @@
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
         android:layout_below="@+id/sign9"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="15dp"
-        android:layout_toStartOf="@+id/sign9"
         android:src="@drawable/circle_stress" />
 
     <ImageView
@@ -106,17 +104,16 @@
         android:layout_below="@+id/sign10"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:layout_toStartOf="@+id/sign10"
+        android:layout_toEndOf="@+id/sign10"
         android:src="@drawable/circle_stress" />
 
     <ImageView
         android:id="@+id/sign12"
         android:layout_width="@dimen/stress_circle_size"
         android:layout_height="@dimen/stress_circle_size"
-        android:layout_below="@+id/sign11"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_toStartOf="@+id/sign11"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/sign11"
+        android:layout_below="@+id/sign10"
         android:src="@drawable/circle_stress" />
 
     <android.support.v7.widget.RecyclerView

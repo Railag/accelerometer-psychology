@@ -143,6 +143,8 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
     };
 
     BluetoothDeviceAdapter.OnDeviceClickListener bluetoothListener = device -> {
+        toMenu();
+
         // start bluetooth host
         acceptThread = new MainActivity.AcceptThread(device);
         acceptThread.start();
@@ -486,7 +488,6 @@ public class MainActivity extends NucleusAppCompatActivity<MainPresenter> implem
         runOnUiThread(() -> {
             stopLoading();
             connected = true;
-            toMenu();
         });
 
         connectedThread = new ConnectedThread(socket);

@@ -63,4 +63,7 @@ public interface RConnectorService {
     @FormUrlEncoded
     @POST("/user/statistics")
     Observable<StatisticsResult> fetchStatistics(@Field("user_id") long userId);
+
+    @POST("/user/statistics_global")
+    Observable<StatisticsResult> fetchStatisticsGlobal();
 }

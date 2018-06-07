@@ -11,6 +11,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 import static com.firrael.psychology.Requests.REQUEST_STATISTICS;
+import static com.firrael.psychology.Requests.REQUEST_STATISTICS_GLOBAL;
 
 /**
  * Created by Railag on 03.05.2017.
@@ -33,11 +34,23 @@ public class StatisticsPresenter extends BasePresenter<StatisticsFragment> {
                         .observeOn(AndroidSchedulers.mainThread()),
                 StatisticsFragment::onSuccess,
                 StatisticsFragment::onError);
+
+        restartableLatestCache(REQUEST_STATISTICS_GLOBAL,
+                () -> service.fetchStatisticsGlobal()
+                        .subscribeOn(Schedulers.newThread())
+                        .observeOn(AndroidSchedulers.mainThread()),
+                StatisticsFragment::onSuccessGlobal,
+                StatisticsFragment::onErrorGlobal);
+
     }
 
     public void fetch(long userId) {
         this.userId = userId;
 
         start(REQUEST_STATISTICS);
+    }
+
+    public void fetchGlobal() {
+        start(REQUEST_STATISTICS_GLOBAL);
     }
 }

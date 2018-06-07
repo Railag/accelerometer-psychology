@@ -85,7 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="@string/stressResistanceTestTitle"
+                    android:text="@string/attentionStabilityTitle"
                     android:textColor="@color/black"
                     android:textSize="22sp" />
 
@@ -94,6 +94,160 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stabilitySection2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/attentionStabilityTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/stabilityChart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stabilitySection3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/attentionStabilityTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/stabilityChart3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stability2Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/attentionStabilityTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/stability2Chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stability2Section2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/attentionStabilityTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/stability2Chart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ramSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/ramVolumeTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/ramChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ram2Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/ramVolumeTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/ram2Chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ram2Section2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/ramVolumeTestTitle"
+                    android:textColor="@color/black"
+                    android:textSize="22sp" />
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/ram2Chart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
 
             </LinearLayout>
 
